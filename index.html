@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <title> Hehllo {{ greeting }} </title>
+</head>
+<body >
+<p> {{ 1 + 6}}</p>
+<p>Say something to the world
+    <input type="text" ng-model="greeting" ng-init="greeting='Hello, '"></p>
+<p>{{ greeting }} world!</p>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<input type="text" placeholder="What is your name" ng-model="name">
+<p>Hello, my name is {{name}}</p>
+
+<select ng-model="animals">
+    <option value="dog">Dogs</option>
+    <option value="cats">Cats</option>
+    <option value="neither">Neither</option>
+</select>
+<h3> I love {{animals}}</h3>
+
+<h4> 1 + 2 = {{1 + 2}} </h4>
+<p>My name is {{"james" + "Volmert" }}</p>
+
+<h4>The array [1,2,3] is {{ [1,2,3].length }} items long</h4>
+
+<h1>{{3.14159265359 | currency }}</h1>
+
+<hr>
+<h3>making a euro</h3>
+
+<!--<h4> {{ 123.456 | currecy:"&euro;"  }} </h4>-->
+
+<p>{{123.33 | currency:"USD$"}}</p>
+
+<input type="text" placeholder="Add Caps" ng-model="caps">
+<h2>Please say something</h2>
+<h3>I am saying ... {{caps | uppercase}}</h3>
+
+
+<hr>
+<h2>Working with number filter</h2>
+<p>This is filtering to the third {{123.456787666 | number:3}}</p>
+<p>Filtering to the sixth number {{  1234565432345.8888888888888888 | number:6 }}</p>
+<p>Stopping at one: {{  1234566666 | number:1 }}</p>
+<h2><strong>Remember number is referring to the decimal point</strong></h2>
+
+<hr>
+<h2>Work with dropdown and filter the number of decimal points</h2>
+<select ng-model='pinum'>
+    <option value='1'>1</option>
+    <option value='2'>2</option>
+    <option value='3'>3</option>
+    <option value='4'>4</option>
+    <option value='5'>5</option>
+    <option value='6'>6</option>
+    <option value='7'>7</option>
+</select>
+
+<h3>Here you go! The first {{ pinum }} digits of pi: </h3>
+<h4>{{3.14159265359 | number: pinum }}</h4>
+</body>
+</html>

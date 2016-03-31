@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html,body {
+            padding: 100px;
+        }
+    </style>
+</head>
+<body>
+<h1 style="text-align: center;">Please fill out the following</h1>
+<label for="bName">Boys name</label>
+<input id="bName" ng-model="bName"><br>
+<label for="adj">Adjective</label>
+<input id="adj" ng-model="adj"><br>
+<label for="plural">Plural Noun</label>
+<input id="plural" ng-model="plural"><br>
+<label for="plural2">Plural Noun:</label>
+<input id="plural2" ng-model="plural2"><br>
+<label for="insect">Insect Plural</label>
+<input id="insect" ng-model="insect"><br>
+<label for="plural3">Plural Noun</label>
+<input id="plural3" ng-model="plural3"><br>
+<label for="verb">a verb ending in 's'</label>
+<input id="verb" ng-model="verb"><br>
+
+<h3>Mad with the libs</h3>
+<p>I'm in love with {{ bName || "Michael" }}.
+    He's so {{  adj  || "happy'  }}.
+    <!--He has big, fat {{   plural  || "runs"  }}-->
+
+</p>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+</body>
+</html>
