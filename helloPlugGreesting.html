@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="" ng-init="greeting='hello'">
+<head>
+    <meta charset="UTF-8">
+    <title>Adding my name</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+<div class="row">
+    <div class="container">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label for="greeting" class="col-md-2 control-label">Greeting</label>
+                <div class="col-md-3">
+                    <select class="form-control" ng-model="greeting">
+                        <option value="salutations">Salutations</option>
+                        <option value="greetings">Greetings</option>
+                        <option value="hello">Hello</option>
+                        <option value="live long and prosper">Live long and prosper</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="fName" class="control-label col-md-2">First Name</label>
+                <div class="col-md-2">
+                    <input id="fName" class="form-control" ng-model="fName">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="lName" class="col-md-2 control-label">Last Name</label>
+                <div class="col-md-2">
+                    <input type="text" placeholder="last name" ng-model="lName">
+                </div>
+            </div>
+        </div>
+        <h2>{{greeting}}, {{fName}} {{lName}}</h2>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</body>
+</html>
