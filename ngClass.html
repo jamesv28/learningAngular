@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <style>
+        .highlight {
+            background-color: yellow;
+
+        }
+    </style>
+</head>
+<body>
+<div ng-class='{highlight: 4 + 4 == 8}'> 4 + 4 = 8</div>
+<div ng-class='{highlight: 4 + 4 == 10}'>4 + 4 = 10</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <style>
+        .success {
+            background: #000;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body >
+<div class="row">
+    <div class="container">
+        <div class="col-md-6 col-md-offset-3">
+            <h2 class="text-center">Sign up!</h2>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" ng-model="pass">
+                <p ng-class='{text-info: pass.length >= 5}'>Your password is {{ pass.length }} characters long</p>
+                <button ng-show="pass.length > 6" class="btn btn-primary">Sign in!</button>
+                <p  ng-show="pass.length < 6">Password is too small</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</body>
+</html>
