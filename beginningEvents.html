@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="events">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body ng-controller="eventController">
+<button ng-click="pickRandomNumber()">Pick a random number</button>
+<h2>{{number}}</h2>
+
+<script src="js/libs/angular.js"></script>
+<script>
+    var app = angular.module('events', []);
+
+    app.controller('eventController', function($scope) {
+//        $scope.number = 6;
+
+        $scope.pickRandomNumber = function() {
+            $scope.number = Math.floor(Math.random() * 10) + 1;
+        }
+    })
+</script>
+</body>
+</html>
