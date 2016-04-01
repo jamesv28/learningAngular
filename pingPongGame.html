@@ -1,12 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style/bootstrap.css">
-</head>
-<body>
+    <style>
+        .player {
+            border: 1px solid black;
+            height: 40vh;
+            color: #ffffff;
+            background: #5152e6;
+        }
 
+        .player h4 {
+            font-size: 70px;
+
+        }
+    </style>
+</head>
+<body ng-controller="myController">
+<div class="row">
+    <div class="container">
+        <h1 class="text-center">Ping Pong Game Keeper</h1>
+        <div class="col-md-5 col-md-offset-1 player">
+            <h3 class="text-center">Player 1</h3>
+            <h4 class="text-center">{{score}}</h4>
+            <button ng-click="addScore()" class="center-block btn btn-default">Add score</button>
+        </div><!-- end of left -->
+        <div class="col-md-5 col-md-offset-1 player">
+            <h3 class="text-center">Player 2</h3>
+            <h4 class="text-center">{{score2}}</h4>
+            <button class="center-block btn  btn-default" ng-click="addScore2()">Add score</button>
+        </div><!-- end of right -->
+    </div>
+</div>
 
 <script src="js/libs/angular.js"></script>
 <script src="js/pinPong.js"></script>
